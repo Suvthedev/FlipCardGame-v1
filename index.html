@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=300,initial-scale=1,user-scalable=no" />
+<title>Memory Game — 300x250</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="frame" data-width="300" data-height="250">
+<!-- Preloader -->
+<div id="preloader" class="preloader" aria-hidden="false">
+  <div class="loader">Loading…</div>
+</div>
+
+<!-- Creative container -->
+<main id="ad" class="ad" role="application" aria-label="Memory game ad unit">
+  <header class="ad-header">
+    <div class="title">Flip & Match</div>
+    <div class="stats">
+      <span id="attempts">Attempts: 0</span>
+      <span id="timer">Time: 0s</span>
+      <button id="resetBtn" class="btn secondary">Reset</button>
+    </div>
+  </header>
+
+  <section id="game-area" class="game-area" aria-live="polite"></section>
+
+</main>
+
+<!-- Completion overlay -->
+<div id="complete" class="overlay hidden" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="overlay-card">
+    <h2>All pairs found!</h2>
+    <p id="summaryText">You matched 6 pairs in 0 attempts.</p>
+    <div class="overlay-actions">
+      <button id="replayBtn" class="btn secondary">Play again</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
